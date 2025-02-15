@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.ProdutoApi", "LojaVirtual.ProdutoApi\LojaVirtual.ProdutoApi.csproj", "{B0259A15-1C71-4496-8489-12652F6AEB6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.FrontWeb", "LojaVirtual.FrontWeb\LojaVirtual.FrontWeb.csproj", "{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0259A15-1C71-4496-8489-12652F6AEB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0259A15-1C71-4496-8489-12652F6AEB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0259A15-1C71-4496-8489-12652F6AEB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0259A15-1C71-4496-8489-12652F6AEB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
