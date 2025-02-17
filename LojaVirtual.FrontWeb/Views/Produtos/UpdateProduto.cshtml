@@ -1,56 +1,68 @@
 ﻿@model LojaVirtual.FrontWeb.Models.ProdutoViewModel
 
+@*UpdateProduto.cshtml*@
 
-<h3>Update Produto</h3>
+<h3 class="text-center mb-4 text-white">Atualizar Produto</h3>
 
 <hr />
-<form asp-action="UpdateProduto">
+<form asp-action="UpdateProduto" enctype="multipart/form-data" class="bg-dark text-white p-4 rounded">
 
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
     <input type="hidden" asp-for="Id" />
+
+    <!-- Nome do Produto -->
     <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
-        <input asp-for="Name" class="form-control" />
+        <label asp-for="Name" class="control-label">Nome</label>
+        <input asp-for="Name" class="form-control bg-secondary text-white border border-6c757d" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
+    <!-- Descrição do Produto -->
     <div class="form-group">
-        <label asp-for="Description" class="control-label"></label>
-        <textarea asp-for="Description" class="form-control"></textarea>
+        <label asp-for="Description" class="control-label">Descrição</label>
+        <textarea asp-for="Description" class="form-control bg-secondary text-white border border-6c757d" rows="4"></textarea>
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
 
+    <!-- Imagem do Produto -->
     <div class="row">
         <div class="form-group col-md-6">
-            <label asp-for="ImageURL" class="control-label"></label>
-            <input asp-for="ImageURL" class="form-control" />
+            <label asp-for="ImageURL" class="control-label">Imagem do Produto</label>
+            <input asp-for="ImageURL" class="form-control bg-secondary text-white border border-6c757d" />
             <span asp-validation-for="ImageURL" class="text-danger"></span>
         </div>
         <div class="form-group col-md-6">
-            <img src="~/images/@Model.ImageURL" />
+            <label class="control-label">Imagem Atual</label>
+            <img src="~/images/@Model.ImageURL" alt="Imagem do Produto" class="img-fluid" />
         </div>
     </div>
+
+    <!-- Preço e Estoque -->
     <div class="row">
-        <div class="form-group col-sm-4">
-            <label asp-for="Price" class="control-label"></label>
-            <input asp-for="Price" asp-format="{0:N2}" class="form-control" />
+        <div class="form-group col-sm-6">
+            <label asp-for="Price" class="control-label">Preço</label>
+            <input asp-for="Price" asp-format="{0:N2}" class="form-control bg-secondary text-white border border-6c757d" />
             <span asp-validation-for="Price" class="text-danger"></span>
         </div>
 
-        <div class="form-group col-sm-4">
-            <label asp-for="Stock" class="control-label"></label>
-            <input asp-for="Stock" class="form-control" />
+        <div class="form-group col-sm-6">
+            <label asp-for="Stock" class="control-label">Estoque</label>
+            <input asp-for="Stock" class="form-control bg-secondary text-white border border-6c757d" />
             <span asp-validation-for="Stock" class="text-danger"></span>
         </div>
     </div>
+
+    <!-- Categoria -->
     <div class="form-group">
-        <label asp-for="CategoriaId" class="control-label"></label>
-        <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+        <label asp-for="CategoriaId" class="control-label">Categoria</label>
+        <select asp-for="CategoriaId" class="form-control bg-secondary text-white border border-6c757d" asp-items="ViewBag.CategoriaId"></select>
         <span asp-validation-for="CategoriaId" class="text-danger"></span>
     </div>
 
+    <!-- Botões de Ação -->
     <div class="form-group" style="padding-top: 10px">
-        <input type="submit" value="Save" class="btn btn-primary" />
-        <a asp-action="Index" class="btn btn-info">Back to List</a>
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-info">Voltar para a Lista</a>
     </div>
 </form>

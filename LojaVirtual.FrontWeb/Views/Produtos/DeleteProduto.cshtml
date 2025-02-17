@@ -1,57 +1,51 @@
 ﻿@model LojaVirtual.FrontWeb.Models.ProdutoViewModel
 
+@*DeleteProduto.cshtml*@
 
-<h3>Delete Produto</h3>
-<h4>Are you sure you want to delete this?</h4>
-<div>
-    <hr />
+<h3 class="text-center mb-4 text-light">Excluir Produto</h3>
+<h4 class="text-center mb-4 text-danger">Tem certeza que deseja excluir este item?</h4>
+
+<div class="mx-auto p-4 rounded" style="max-width: 800px; background-color: #1e1e1e; color: #fff;">
+    <hr class="border-secondary" />
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CategoriaName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CategoriaName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-          <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Stock)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Stock)
-        </dd>
-        </dd>
-          <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageURL)
-        </dt>
-       </dl>
-        <div class="row">
-          <div class="form-group col-md-4">
-            <img src="~/images/@Model.ImageURL" />
-          </div>
-        </div>    
-   
+        <!-- Nome do Produto -->
+        <dt class="col-sm-3 fw-bold">Nome</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+        <!-- Categoria -->
+        <dt class="col-sm-3 fw-bold">Categoria</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.CategoriaName)</dd>
+
+        <!-- Descrição -->
+        <dt class="col-sm-3 fw-bold">Descrição</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Description)</dd>
+
+        <!-- Preço -->
+        <dt class="col-sm-3 fw-bold">Preço</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Price)</dd>
+
+        <!-- Estoque -->
+        <dt class="col-sm-3 fw-bold">Estoque</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Stock)</dd>
+
+        <!-- URL da Imagem -->
+        <dt class="col-sm-3 fw-bold">Imagem</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.ImageURL)</dd>
+    </dl>
+
+    <!-- Preview da Imagem -->
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-6 text-center">
+            <img src="~/images/@Model.ImageURL" class="img-fluid rounded shadow-lg border border-secondary" alt="Imagem do Produto" />
+        </div>
+    </div>
+
+    <!-- Confirmação de Exclusão -->
     <form asp-action="DeleteProduto">
         <input type="hidden" asp-for="Id" />
-          <div class="form-group" style="padding-top: 10px">
-            <input type="submit" value="Delete" class="btn btn-danger" />
-            <a asp-action="Index" class="btn btn-info">Back to List</a>
+        <div class="form-group text-center">
+            <input type="submit" value="Excluir" class="btn btn-danger w-50 mb-3 fw-bold" />
+            <a asp-action="Index" class="btn btn-outline-light w-50">Cancelar</a>
         </div>
     </form>
 </div>
