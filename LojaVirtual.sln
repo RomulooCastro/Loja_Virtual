@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.ProdutoApi", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.FrontWeb", "LojaVirtual.FrontWeb\LojaVirtual.FrontWeb.csproj", "{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{E57FBCEF-C482-4D9F-B456-64EA3878B41C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{DF0B27E0-C173-45CE-961A-6D669EB0FCA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.IdentityServer", "LojaVirtual.IdentityServer\LojaVirtual.IdentityServer.csproj", "{DE78F955-2046-4BFA-AC7A-474453EB50B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +27,17 @@ Global
 		{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE78F955-2046-4BFA-AC7A-474453EB50B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE78F955-2046-4BFA-AC7A-474453EB50B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE78F955-2046-4BFA-AC7A-474453EB50B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE78F955-2046-4BFA-AC7A-474453EB50B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0259A15-1C71-4496-8489-12652F6AEB6A} = {DF0B27E0-C173-45CE-961A-6D669EB0FCA0}
+		{DE98AB1F-EA1D-46C5-A4A1-05B8244A02EF} = {E57FBCEF-C482-4D9F-B456-64EA3878B41C}
+		{DE78F955-2046-4BFA-AC7A-474453EB50B0} = {DF0B27E0-C173-45CE-961A-6D669EB0FCA0}
 	EndGlobalSection
 EndGlobal
