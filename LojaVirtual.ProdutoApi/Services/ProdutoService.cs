@@ -37,8 +37,8 @@ public class ProdutoService : IProdutoService
 
     public async Task UpdateProduto(ProdutoDTO produtoDTO)
     {
-        var categoryEntity = _mapper.Map<Produto>(produtoDTO);
-        await _produtoRepository.Update(categoryEntity);
+        var categoriaEntity = _mapper.Map<Produto>(produtoDTO);
+        await _produtoRepository.Update(categoriaEntity);
     }
 
     public async Task RemoveProduto(int id)

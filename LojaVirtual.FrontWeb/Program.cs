@@ -1,3 +1,6 @@
+using LojaVirtual.FrontWeb.Services;
+using LojaVirtual.FrontWeb.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,9 @@ builder.Services.AddHttpClient("ProdutoApi", c =>
 {
     c.BaseAddress = new Uri(builder.Configuration["ServiceUri:ProdutoApi"]);
 });
+
+builder.Services.AddScoped<IProdutoService, ProdutoService>();
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 
 var app = builder.Build();
 

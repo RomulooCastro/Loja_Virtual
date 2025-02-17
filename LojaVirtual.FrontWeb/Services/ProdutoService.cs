@@ -29,7 +29,8 @@ namespace LojaVirtual.FrontWeb.Services
                 {
                     var apiResponse = await response.Content.ReadAsStreamAsync();
 
-                    produtosVM = await JsonSerializer.DeserializeAsync<IEnumerable<ProdutoViewModel>>(apiResponse, _options);
+                    produtosVM = await JsonSerializer
+                        .DeserializeAsync<IEnumerable<ProdutoViewModel>>(apiResponse, _options);
                 }
                 else {
                     return null;
@@ -48,7 +49,8 @@ namespace LojaVirtual.FrontWeb.Services
                 {
                     var apiResponse = await response.Content.ReadAsStreamAsync();
 
-                    produtoVM = await JsonSerializer.DeserializeAsync<ProdutoViewModel>(apiResponse, _options);
+                    produtoVM = await JsonSerializer
+                        .DeserializeAsync<ProdutoViewModel>(apiResponse, _options);
                 }
                 else
                 {
@@ -70,7 +72,8 @@ namespace LojaVirtual.FrontWeb.Services
                 {
                     var apiResponse = await response.Content.ReadAsStreamAsync();
 
-                    produtoVM = await JsonSerializer.DeserializeAsync<ProdutoViewModel>(apiResponse, _options);
+                    produtoVM = await JsonSerializer
+                        .DeserializeAsync<ProdutoViewModel>(apiResponse, _options);
                 }
                 else
                 {
@@ -91,7 +94,8 @@ namespace LojaVirtual.FrontWeb.Services
                 {
                     var apiResponse = await response.Content.ReadAsStreamAsync();
 
-                    produtoUpdated = await JsonSerializer.DeserializeAsync<ProdutoViewModel>(apiResponse, _options);
+                    produtoUpdated = await JsonSerializer
+                        .DeserializeAsync<ProdutoViewModel>(apiResponse, _options);
                 }
                 else
                 {
